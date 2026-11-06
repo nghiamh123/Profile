@@ -3,465 +3,619 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nghia Dang — Software Engineer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nghia Dang — Frontend Engineer · React, Next.js, Three.js</title>
+  <meta name="description"
+    content="Nghia Dang is a frontend engineer in Ho Chi Minh City with 4+ years building fast React / Next.js interfaces, real-time dashboards and 3D Digital Twin web apps with Three.js.">
+  <meta name="theme-color" content="#0d0d10">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Nghia Dang — Frontend Engineer">
+  <meta property="og:description"
+    content="React, Next.js, TypeScript and Three.js — from 3D Digital Twins to real-time B2B SaaS dashboards.">
+  <meta property="og:image" content="./images/work/s9.webp">
+
+  <script>
+    (function () {
+      document.documentElement.classList.add('js');
+      try {
+        var saved = localStorage.getItem('theme');
+        var theme = saved || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) { document.documentElement.setAttribute('data-theme', 'dark'); }
+    })();
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="./font/fontawesome-free-5.15.4-web/css/all.min.css">
-  <link rel="stylesheet" href="./style/base.css">
-  <link rel="stylesheet" href="./style/main.css">
-  <link rel="stylesheet" href="./style/responsive.css">
-  <link rel="shortcut icon" type="image/x-icon" href="./images/favio.png">
+  <link rel="stylesheet" href="./style/base.css?v=4">
+  <link rel="stylesheet" href="./style/main.css?v=4">
+  <link rel="stylesheet" href="./style/responsive.css?v=4">
+  <link rel="icon" type="image/png" href="./images/work/logo-mark.png">
 </head>
 
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- Nav -->
-  <nav class="nav" id="navbar" role="navigation" aria-label="Main navigation">
-    <div class="container">
-      <a href="#" class="nav-logo">
-        <img src="./images/favio.png" alt="DN">
-        Nghia<span>.</span>
+  <!-- Arrow icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-arrow-ur" viewBox="0 0 24 24">
+      <path d="M7 17 17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round" />
+    </symbol>
+    <symbol id="i-arrow-r" viewBox="0 0 24 24">
+      <path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round" />
+    </symbol>
+    <symbol id="i-arrow-d" viewBox="0 0 24 24">
+      <path d="M12 5v14M6 13l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round" />
+    </symbol>
+  </svg>
+
+  <!-- ═════════════ NAV ═════════════ -->
+  <header class="nav" id="navbar">
+    <div class="container nav-inner">
+      <a href="#top" class="nav-logo" aria-label="Nghia Dang — back to top">
+        <img src="./images/work/logo-mark.png" alt="" width="32" height="32">
+        <span>Nghia Dang</span>
       </a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#about">About</a></li>
-        <li><a href="#work">Work</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#contact" class="nav-cta">Contact</a></li>
-      </ul>
-      <div class="burger" id="burger" aria-label="Toggle menu" role="button" tabindex="0">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-  </nav>
 
-  <!-- Hero -->
-  <header class="hero" id="hero">
-    <video class="hero-video" autoplay muted loop playsinline poster="./images/wallpaper.jpg">
-      <source src="./images/hero-bg-2.mp4" type="video/mp4">
-    </video>
-    <div class="hero-overlay"></div>
-    <div class="hero-blob"></div>
-    <div class="hero-blob-2"></div>
-    <div class="container">
-      <div class="hero-grid">
-        <div class="hero-content">
-          <span class="hero-tag">Software Engineer</span>
-          <h1 class="hero-name">Nghia</h1>
-          <h2 class="hero-name-outline">Dang</h2>
-          <p class="hero-desc">
-            4+ years crafting high-performance front-end solutions — from 3D Digital Twins to real-time B2B SaaS dashboards.
-          </p>
-          <div class="hero-actions">
-            <a href="#contact" class="btn-primary">Get in touch</a>
-            <a href="#work" class="btn-secondary">View work</a>
-          </div>
-        </div>
-        <div class="hero-visual reveal">
-          <div class="hero-visual-ring">
-            <svg class="hero-visual-ring-svg" viewBox="0 0 340 340" aria-hidden="true">
-              <defs>
-                <path id="sloganPath" d="M 170 36 A 134 134 0 1 1 169.9 36" fill="none" />
-              </defs>
-              <text fill="currentColor" font-size="11" font-weight="600" letter-spacing="6"
-                font-family="var(--font-sans)">
-                <textPath href="#sloganPath" startOffset="0%">
-                  SOFTWARE ENGINEER • CREATIVE DEVELOPER • UI / UX DESIGNER •
-                </textPath>
-              </text>
-            </svg>
-            <div class="hero-visual-ring-inner">
-              <img src="./images/profile.jpg" alt="Nghia Dang">
-            </div>
-            <div class="hero-visual-dot"></div>
-          </div>
-          <span class="hero-visual-label">Based in HCM City</span>
-        </div>
+      <nav class="nav-menu" id="navMenu" aria-label="Main">
+        <ul>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#expertise">Expertise</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle" id="themeToggle" type="button" aria-label="Switch to light theme">
+          <i class="fas fa-sun icon-sun" aria-hidden="true"></i>
+          <i class="fas fa-moon icon-moon" aria-hidden="true"></i>
+        </button>
+        <a href="#contact" class="btn btn-primary btn-sm nav-cta">Let's talk</a>
+        <button class="icon-btn burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false"
+          aria-controls="navMenu">
+          <span></span><span></span>
+        </button>
       </div>
     </div>
   </header>
 
-  <!-- Hero Mobile -->
-  <section class="hero-mobile" id="heroMobile">
-    <video class="hero-video" autoplay muted loop playsinline poster="./images/wallpaper.jpg">
-      <source src="./images/hero-bg-2.mp4" type="video/mp4">
-    </video>
-    <div class="hero-overlay"></div>
-    <img src="./images/profile.jpg" alt="Nghia Dang" class="hero-mobile-avatar">
-    <span class="hero-tag">Software Engineer</span>
-    <h1 class="hero-mobile-name">Nghia Dang</h1>
-    <p class="hero-mobile-sub">4+ years crafting high-performance front-end solutions — from 3D Digital Twins to real-time B2B SaaS dashboards.</p>
-    <div class="hero-actions" style="justify-content:center;">
-      <a href="#contact" class="btn-primary">Get in touch</a>
-      <a href="#work" class="btn-secondary">View work</a>
-    </div>
-    <div style="margin-top: 28px; display: flex; gap: 24px; color: var(--text-muted); font-size: 1.25rem;">
-      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-      <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-    </div>
-  </section>
+  <main id="main">
 
-  <!-- About -->
-  <section class="section" id="about">
-    <div class="container">
-      <div class="about-statement reveal">
-        Software Engineer with <em>4+ years</em> of experience specializing in <em>ReactJS, Next.js, TypeScript</em>
-        and UI/UX performance optimization for high-traffic, real-time data systems and B2B SaaS solutions.
+    <!-- ═════════════ HERO ═════════════ -->
+    <section class="hero" id="top" aria-labelledby="heroTitle">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-grid-lines"></div>
+        <div class="hero-glow"></div>
       </div>
-      <div class="about-grid reveal reveal-delay-1">
-        <div class="about-visual">
-          <img src="./images/profile2.jpg" alt="Nghia Dang portrait">
-          <div class="about-visual-decor"></div>
-        </div>
-        <div class="about-bio">
-          <p>
-            Proven expertise in transforming complex backend architectures, telemetry data streams, and 3D simulation
-            analysis (Digital Twin, Three.js) into highly intuitive, precise, and high-performing user interfaces.
+
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <a href="#experience" class="status-pill reveal">
+            <span class="status-dot" aria-hidden="true"></span>
+            Now building 3D Digital Twins at Vinatech Solution
+          </a>
+
+          <h1 class="hero-title reveal" id="heroTitle">
+            <span class="hero-hello">Hi, I'm Nghia Dang —</span>
+            I build <em>fast, clear</em> interfaces for real&#8209;time data &amp; 3D.
+          </h1>
+
+          <p class="hero-lead reveal">
+            Frontend engineer with 4+ years in React, Next.js, TypeScript and Three.js. I turn telemetry streams,
+            complex back-ends and 3D scenes into UIs people can actually use — from warehouse Digital Twins to B2B SaaS
+            dashboards.
           </p>
-          <p>
-            Possesses a strong product-driven mindset with extensive experience collaborating in Agile/Scrum environments
-            and leveraging AI-powered development tools (Gemini, ChatGPT) to accelerate product engineering.
-          </p>
-          <div class="about-details">
-            <div class="about-detail-item">
-              <span class="label">Name</span>
-              <span class="value">Dang Nghia</span>
-            </div>
-            <div class="about-detail-item">
-              <span class="label">Experience</span>
-              <span class="value">4+ Years</span>
-            </div>
-            <div class="about-detail-item">
-              <span class="label">Location</span>
-              <span class="value">District 12, HCMC</span>
-            </div>
-            <div class="about-detail-item">
-              <span class="label">Email</span>
-              <span class="value">nghia12a319@gmail.com</span>
-            </div>
-            <div class="about-detail-item">
-              <span class="label">University</span>
-              <span class="value">Ton Duc Thang University</span>
-            </div>
-            <div class="about-detail-item">
-              <span class="label">Date of Birth</span>
-              <span class="value">March 15, 2000</span>
-            </div>
-            <div class="about-detail-item">
-              <span class="label">Phone</span>
-              <span class="value">+84 85 378 35 78</span>
-            </div>
-            <div class="about-detail-item">
-              <span class="label">Languages</span>
-              <span class="value">English (TOEIC 600+)</span>
-            </div>
-          </div>
-          <div class="btn-download-cv">
-            <button class="btn-primary btn-download-trigger">Download CV <i class="fas fa-chevron-down" style="font-size:0.7rem;margin-left:4px;"></i></button>
-            <div class="btn-download-dropdown">
-              <a href="./cv/CV_Dang_Hoang_Dai_Nghia_Frontend_Developer_EN.pdf" target="_blank" download><i class="fas fa-file-pdf"></i> English</a>
-              <a href="./cv/CV_Dang_Hoang_Dai_Nghia_Frontend_Developer_VI.pdf" target="_blank" download><i class="fas fa-file-pdf"></i> Vietnamese</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Work / Photos -->
-  <section class="section section-alt" id="work">
-    <div class="container">
-      <div style="margin-bottom: 48px;" class="reveal">
-        <span class="section-tag">Portfolio</span>
-        <h2 class="section-title">Selected <span style="color:var(--accent);">Work</span></h2>
-      </div>
-      <div class="photo-grid">
-        <a href="https://vizion.global/" target="_blank" class="photo-card card-1 reveal-scale reveal-delay-1">
-          <img src="./images/s2.jpg" alt="Vizion Home Page">
-          <div class="photo-card-overlay">
-            <h3>Vizion Home Page</h3>
-            <p>Landing • Animation • Brand</p>
+          <div class="hero-actions reveal">
+            <a href="#work" class="btn btn-primary">
+              See selected work
+              <svg class="btn-icon btn-icon-down" aria-hidden="true"><use href="#i-arrow-d" /></svg>
+            </a>
+            <a href="mailto:nghia12a319@gmail.com" class="btn btn-ghost">
+              <i class="far fa-envelope" aria-hidden="true"></i>
+              nghia12a319@gmail.com
+            </a>
           </div>
-        </a>
-        <a href="https://2fvisual-khaihoanprime.vizion.space/" target="_blank" class="photo-card card-2 reveal-scale reveal-delay-2">
-          <img src="./images/s6.png" alt="Khai Hoan Prime">
-          <div class="photo-card-overlay">
-            <h3>Khai Hoan Prime</h3>
-            <p>Real Estate • 3D Tour • Interactive</p>
-          </div>
-        </a>
-        <a href="https://nghiadang-vizion.github.io/Aura_Jewelry_Store.2025/" target="_blank" class="photo-card card-3 reveal-scale reveal-delay-3">
-          <img src="./images/s1.png" alt="Aura Jewelry">
-          <div class="photo-card-overlay">
-            <h3>Aura Jewelry</h3>
-            <p>E-commerce • React • Three.js</p>
-          </div>
-        </a>
-        <a href="https://demo.vizion.space/i-mbh" target="_blank" class="photo-card card-4 reveal-scale reveal-delay-4">
-          <img src="./images/s3.png" alt="Mobile Home">
-          <div class="photo-card-overlay">
-            <h3>Mobile Home</h3>
-            <p>Web Development • UI/UX • Demo</p>
-          </div>
-        </a>
-        <a href="https://demo.vizion.space/demo-car-3d" target="_blank" class="photo-card card-5 reveal-scale reveal-delay-5">
-          <img src="./images/s4.png" alt="3D Show Room">
-          <div class="photo-card-overlay">
-            <h3>3D Show Room</h3>
-            <p>WebGL • Three.js • Interactive</p>
-          </div>
-        </a>
-        <a href="https://demo.vizion.space/vr-factory" target="_blank" class="photo-card card-6 reveal-scale">
-          <img src="./images/s5.png" alt="VR Factory">
-          <div class="photo-card-overlay">
-            <h3>VR Factory</h3>
-            <p>VR • 3D • Immersive</p>
-          </div>
-        </a>
-        <a href="https://fromthestress.vn/" target="_blank" class="photo-card card-7 reveal-scale reveal-delay-1">
-          <img src="./images/s7.jpg" alt="From the Stress">
-          <div class="photo-card-overlay">
-            <h3>From the Stress</h3>
-            <p>Landing • Animation • Brand</p>
-          </div>
-        </a>
-        <a href="https://vietrunner.com/" target="_blank" class="photo-card card-11 reveal-scale">
-          <img src="./images/s8.jpg" alt="Vietrunner">
-          <div class="photo-card-overlay">
-            <h3>Vietrunner</h3>
-            <p>Landing • Animation • Brand</p>
-          </div>
-        </a>
-        <a href="https://fms.autovts.dev/" target="_blank" class="photo-card card-12 reveal-scale">
-          <img src="./images/s9.jpg" alt="Warehouse Control System">
-          <div class="photo-card-overlay">
-            <h3>Warehouse Control System</h3>
-            <p>Web Development • React • Node.js</p>
-          </div>
-        </a>
-        <a href="http://baobitienthanh.com/" target="_blank" class="photo-card card-13 reveal-scale">
-          <img src="./images/s10.jpg" alt="Bao Bì Tiến Thành">
-          <div class="photo-card-overlay">
-            <h3>Bao Bì Tiến Thành</h3>
-            <p>E-commerce • Laravel • SQL</p>
-          </div>
-        </a>
-        <a href="https://vr360.etown.vizion.space/map" target="_blank" class="photo-card card-14 reveal-scale">
-          <img src="./images/s11.jpg" alt="Etown 3d Tour">
-          <div class="photo-card-overlay">
-            <h3>Etown 3d Tour</h3>
-            <p>Web Development • Three.js • Interactive</p>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
 
-  <!-- Services -->
-  <section class="section" id="services">
-    <div class="container">
-      <div style="margin-bottom: 48px;" class="reveal">
-        <span class="section-tag">Expertise</span>
-        <h2 class="section-title">What I <span style="color:var(--accent);">Do</span></h2>
-      </div>
-      <div class="services-list">
-        <div class="service-item reveal-left">
-          <span class="service-number">01</span>
-          <div class="service-item-body">
-            <h3>Front-End <span style="color:var(--accent);">Development</span></h3>
-            <p>ReactJS, Next.js, TypeScript, JavaScript, HTML5, SASS/CSS3. Building responsive, performant web applications with clean architecture and maintainable code.</p>
-          </div>
+          <ul class="hero-meta reveal" aria-label="Quick links">
+            <li>
+              <a href="https://github.com/nghiadang-vizion" target="_blank" rel="noopener">
+                <i class="fab fa-github" aria-hidden="true"></i> GitHub
+              </a>
+            </li>
+            <li>
+              <a href="./cv/CV_Dang_Hoang_Dai_Nghia_Frontend_Developer_EN.pdf" target="_blank" rel="noopener">
+                <i class="far fa-file-pdf" aria-hidden="true"></i> Résumé (PDF)
+              </a>
+            </li>
+            <li class="hero-clock">
+              <i class="far fa-clock" aria-hidden="true"></i>
+              Ho Chi Minh City · <time id="localTime">GMT+7</time>
+            </li>
+          </ul>
         </div>
-        <div class="service-item reveal-left reveal-delay-1">
-          <span class="service-number">02</span>
-          <div class="service-item-body">
-            <h3>Data & UI <span style="color:var(--accent);">Optimization</span></h3>
-            <p>Advanced state management, form validation, component design, and UI performance tuning for massive datasets, large tables/lists, and real-time operational dashboards.</p>
-          </div>
-        </div>
-        <div class="service-item reveal-left reveal-delay-2">
-          <span class="service-number">03</span>
-          <div class="service-item-body">
-            <h3>System <span style="color:var(--accent);">Integration</span></h3>
-            <p>RESTful API integration, JWT authentication & authorization flows, real-time telemetry communication. Proficient in Git, Nginx, Docker, Postman/Swagger.</p>
-          </div>
-        </div>
-        <div class="service-item reveal-left reveal-delay-3">
-          <span class="service-number">04</span>
-          <div class="service-item-body">
-            <h3>3D & <span style="color:var(--accent);">Simulation</span></h3>
-            <p>Three.js, WebGL, WebXR (AR/VR), Model-Viewer, Digital Twin architecture. Building production-grade 3D web applications with optimized shaders and asset pipelines.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Experience -->
-  <section class="section section-alt" id="experience">
-    <div class="container">
-      <div style="margin-bottom: 64px;" class="reveal">
-        <span class="section-tag">Career</span>
-        <h2 class="section-title">Work <span style="color:var(--accent);">Experience</span></h2>
-      </div>
-      <div class="timeline">
-        <div class="timeline-item" data-year="2026">
-          <div class="timeline-year" data-year="2026">
-            <span class="timeline-year-num">2026</span>
-            <span class="timeline-year-label">Present</span>
+        <div class="hero-visual reveal" aria-hidden="true">
+          <div class="portrait">
+            <img src="./images/work/profile.webp" alt="" width="600" height="900" fetchpriority="high">
           </div>
-          <div class="timeline-content reveal-left">
-            <div class="timeline-meta">
-              <span class="timeline-company">Vinatech Solution</span>
-              <span class="timeline-role">Frontend Web Developer</span>
+          <div class="code-card">
+            <div class="code-card-bar">
+              <span></span><span></span><span></span>
+              <code>nghia.ts</code>
             </div>
-            <p>Researching and building high-fidelity 3D Digital Twin solutions for intelligent Warehouse Management Systems (WMS). Engineering low-latency real-time synchronization between AGV/AMR robot hardware and 3D web models via telemetry data processing. Designing multi-layered dashboard interfaces for monitoring tasks, workflows, and system audits.</p>
-            <div class="timeline-tech">
-              <span>Three.js</span>
-              <span>ReactJS</span>
-              <span>WebGL</span>
-              <span>Real-time Telemetry</span>
-              <span>Digital Twin</span>
-            </div>
-          </div>
-        </div>
-        <div class="timeline-item" data-year="2022">
-          <div class="timeline-year" data-year="2022">
-            <span class="timeline-year-num">2022</span>
-            <span class="timeline-year-label">2022 – 2026</span>
-          </div>
-          <div class="timeline-content reveal-left reveal-delay-1">
-            <div class="timeline-meta">
-              <span class="timeline-company">Vizion LLC</span>
-              <span class="timeline-role">Software Engineer (Front-end Specialist)</span>
-            </div>
-            <p>Developed and maintained complex enterprise web applications, re-architecting component structures to improve initial page load times by 30%. Integrated robust RESTful APIs with response caching and optimal state hydration logic, enhancing API interaction speeds by 25%. Built over 10 production-grade 3D web applications using Three.js & WebGL.</p>
-            <div class="timeline-tech">
-              <span>ReactJS</span>
-              <span>Next.js</span>
-              <span>Three.js</span>
-              <span>TypeScript</span>
-              <span>RESTful API</span>
-              <span>Agile/Scrum</span>
-            </div>
-          </div>
-        </div>
-        <div class="timeline-item" data-year="2018">
-          <div class="timeline-year" data-year="2018">
-            <span class="timeline-year-num">2018</span>
-            <span class="timeline-year-label">Education</span>
-          </div>
-          <div class="timeline-content reveal-left reveal-delay-2">
-            <div class="timeline-meta">
-              <span class="timeline-company">Ton Duc Thang University</span>
-              <span class="timeline-role">Bachelor of Software Engineering</span>
-            </div>
-            <p>Graduated with a degree in Software Engineering (Information Technology major), GPA 7.5/10. Built a strong foundation in software architecture, data structures, and modern web technologies that launched a career in front-end engineering.</p>
-            <div class="timeline-tech">
-              <span>Software Engineering</span>
-              <span>Information Technology</span>
-              <span>GPA 7.5</span>
-            </div>
+<pre><code><span class="tk-k">export const</span> <span class="tk-v">nghia</span> = {
+  role: <span class="tk-s">'Frontend Engineer'</span>,
+  stack: [<span class="tk-s">'React'</span>, <span class="tk-s">'Next.js'</span>,
+          <span class="tk-s">'TypeScript'</span>, <span class="tk-s">'Three.js'</span>],
+  focus: <span class="tk-s">'Digital Twin · Real-time UI'</span>,
+  shipped3dApps: <span class="tk-n">10</span>,
+}<span class="caret"></span></code></pre>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contact -->
-  <section class="section" id="contact">
-    <div class="container">
-      <div style="margin-bottom: 48px;" class="reveal">
-        <span class="section-tag">Contact</span>
-        <h2 class="section-title">Let's <span style="color:var(--accent);">Talk</span></h2>
+    <!-- ═════════════ IMPACT ═════════════ -->
+    <section class="impact" aria-label="Highlights">
+      <div class="container">
+        <ul class="impact-list">
+          <li class="impact-item reveal">
+            <strong data-count="4" data-suffix="+">4+</strong>
+            <span>years shipping production frontends</span>
+          </li>
+          <li class="impact-item reveal">
+            <strong data-count="10" data-suffix="+">10+</strong>
+            <span>production 3D web apps built with Three.js &amp; WebGL</span>
+          </li>
+          <li class="impact-item reveal">
+            <strong data-count="30" data-suffix="%">30%</strong>
+            <span>faster initial page load after re-architecting components</span>
+          </li>
+          <li class="impact-item reveal">
+            <strong data-count="25" data-suffix="%">25%</strong>
+            <span>faster API interactions via caching &amp; state hydration</span>
+          </li>
+        </ul>
       </div>
-      <div class="contact-grid reveal reveal-delay-1">
-        <div class="contact-info">
-          <div class="contact-card reveal-left">
-            <div class="contact-card-icon"><i class="fas fa-map-marker-alt"></i></div>
-            <div>
-              <h4>Location</h4>
-              <span>Dong Hung Thuan, Tp HCM</span>
+    </section>
+
+    <!-- ═════════════ WORK ═════════════ -->
+    <section class="section" id="work" aria-labelledby="workTitle">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow"><span>01</span> Selected work</p>
+          <h2 class="section-title" id="workTitle">Real products, live in the browser.</h2>
+          <p class="section-sub">Three projects that show what I do best: real-time systems, interactive 3D and
+            performance-minded UI. Every card links to the live site.</p>
+        </header>
+
+        <div class="featured">
+          <!-- Featured 1 -->
+          <article class="feature reveal">
+            <a class="feature-media" href="https://fms.autovts.dev/" target="_blank" rel="noopener"
+              aria-label="Open Warehouse Control System (live site)">
+              <img src="./images/work/s9.webp" srcset="./images/work/s9-sm.webp 720w, ./images/work/s9.webp 1400w"
+                sizes="(max-width: 900px) 100vw, 640px" alt="Warehouse Control System showing a 3D map of racks and an automated crane"
+                width="1400" height="711" loading="lazy" decoding="async">
+            </a>
+            <div class="feature-body">
+              <p class="feature-kicker">Web app · Real-time · 3D</p>
+              <h3>Warehouse Control System</h3>
+              <p>Operations console for an automated warehouse: fleet, tasks and maps in one place, with a live 3D
+                navigation view of racks and machines so operators see what the system is doing.</p>
+              <ul class="tags">
+                <li>React</li>
+                <li>Three.js</li>
+                <li>Node.js</li>
+                <li>Dashboard</li>
+              </ul>
+              <a class="link-arrow" href="https://fms.autovts.dev/" target="_blank" rel="noopener">
+                Visit live site <svg aria-hidden="true"><use href="#i-arrow-ur" /></svg>
+              </a>
             </div>
-          </div>
-          <div class="contact-card reveal-left reveal-delay-1">
-            <div class="contact-card-icon"><i class="fas fa-phone"></i></div>
-            <div>
-              <h4>Phone</h4>
-              <span>+84 85 378 35 78</span>
+          </article>
+
+          <!-- Featured 2 -->
+          <article class="feature feature-flip reveal">
+            <a class="feature-media" href="https://2fvisual-khaihoanprime.vizion.space/" target="_blank" rel="noopener"
+              aria-label="Open Khai Hoan Prime 3D tour (live site)">
+              <img src="./images/work/s6.webp" srcset="./images/work/s6-sm.webp 720w, ./images/work/s6.webp 1400w"
+                sizes="(max-width: 900px) 100vw, 640px" alt="Aerial 3D tour of the Khai Hoan Prime towers with amenity hotspots"
+                width="1400" height="735" loading="lazy" decoding="async">
+            </a>
+            <div class="feature-body">
+              <p class="feature-kicker">Real estate · 3D tour</p>
+              <h3>Khai Hoan Prime</h3>
+              <p>Interactive aerial tour for a residential launch — buyers explore the towers, nearby amenities and the
+                site plan through clickable hotspots and a live mini-map, right in the browser.</p>
+              <ul class="tags">
+                <li>Three.js</li>
+                <li>WebGL</li>
+                <li>Interactive map</li>
+              </ul>
+              <a class="link-arrow" href="https://2fvisual-khaihoanprime.vizion.space/" target="_blank" rel="noopener">
+                Visit live site <svg aria-hidden="true"><use href="#i-arrow-ur" /></svg>
+              </a>
             </div>
-          </div>
-          <div class="contact-card reveal-left reveal-delay-2">
-            <div class="contact-card-icon"><i class="fas fa-envelope"></i></div>
-            <div>
-              <h4>Email</h4>
-              <span>nghia12a319@gmail.com</span>
+          </article>
+
+          <!-- Featured 3 -->
+          <article class="feature reveal">
+            <a class="feature-media" href="https://demo.vizion.space/demo-car-3d" target="_blank" rel="noopener"
+              aria-label="Open 3D Show Room (live demo)">
+              <img src="./images/work/s4.webp" srcset="./images/work/s4-sm.webp 720w, ./images/work/s4.webp 1400w"
+                sizes="(max-width: 900px) 100vw, 640px" alt="Classic white sports car rendered in a WebGL showroom"
+                width="1400" height="700" loading="lazy" decoding="async">
+            </a>
+            <div class="feature-body">
+              <p class="feature-kicker">WebGL · Product showcase</p>
+              <h3>3D Show Room</h3>
+              <p>A real-time car showroom: orbit the model, switch between exterior and interior views and change the
+                lighting — product visualisation that runs smoothly on a normal laptop.</p>
+              <ul class="tags">
+                <li>Three.js</li>
+                <li>WebGL</li>
+                <li>Shaders</li>
+              </ul>
+              <a class="link-arrow" href="https://demo.vizion.space/demo-car-3d" target="_blank" rel="noopener">
+                Try the demo <svg aria-hidden="true"><use href="#i-arrow-ur" /></svg>
+              </a>
             </div>
+          </article>
+        </div>
+
+        <!-- More projects -->
+        <div class="more-head reveal">
+          <h3 class="more-title">More projects</h3>
+          <div class="filters" role="group" aria-label="Filter projects">
+            <button type="button" class="filter is-active" data-filter="all" aria-pressed="true">All</button>
+            <button type="button" class="filter" data-filter="3d" aria-pressed="false">3D &amp; XR</button>
+            <button type="button" class="filter" data-filter="app" aria-pressed="false">Web apps</button>
+            <button type="button" class="filter" data-filter="brand" aria-pressed="false">Brand sites</button>
           </div>
-          <div class="contact-card reveal-left reveal-delay-3">
-            <div class="contact-card-icon"><i class="fas fa-share-alt"></i></div>
-            <div>
-              <h4>Social</h4>
-              <div class="contact-card-social">
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-square"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" aria-label="Twitter"><i class="fab fa-twitter-square"></i></a>
+        </div>
+
+        <ul class="project-grid" id="projectGrid">
+          <li class="project" data-cat="app">
+            <a href="https://saohop.com/" target="_blank" rel="noopener">
+              <div class="project-thumb">
+                <img src="./images/work/s12-sm.webp" alt="" width="720" height="360" loading="lazy" decoding="async">
               </div>
+              <div class="project-info">
+                <h4>Sao Hợp</h4>
+                <p>Birth-date compatibility check, explained by AI</p>
+                <span class="project-tags">Web app · AI</span>
+              </div>
+              <svg class="project-arrow" aria-hidden="true"><use href="#i-arrow-ur" /></svg>
+            </a>
+          </li>
+          <li class="project" data-cat="3d">
+            <a href="https://vr360.etown.vizion.space/map" target="_blank" rel="noopener">
+              <div class="project-thumb">
+                <img src="./images/work/s11-sm.webp" alt="" width="720" height="497" loading="lazy" decoding="async">
+              </div>
+              <div class="project-info">
+                <h4>Etown 3D Tour</h4>
+                <p>360° aerial tour of an office campus</p>
+                <span class="project-tags">Three.js · Interactive</span>
+              </div>
+              <svg class="project-arrow" aria-hidden="true"><use href="#i-arrow-ur" /></svg>
+            </a>
+          </li>
+          <li class="project" data-cat="3d">
+            <a href="https://demo.vizion.space/vr-factory" target="_blank" rel="noopener">
+              <div class="project-thumb">
+                <img src="./images/work/s5-sm.webp" alt="" width="720" height="382" loading="lazy" decoding="async">
+              </div>
+              <div class="project-info">
+                <h4>VR Factory</h4>
+                <p>Walk-through factory tour with VR mode</p>
+                <span class="project-tags">WebXR · 360°</span>
+              </div>
+              <svg class="project-arrow" aria-hidden="true"><use href="#i-arrow-ur" /></svg>
+            </a>
+          </li>
+          <li class="project" data-cat="3d">
+            <a href="https://demo.vizion.space/i-mbh" target="_blank" rel="noopener">
+              <div class="project-thumb">
+                <img src="./images/work/s3-sm.webp" alt="" width="720" height="380" loading="lazy" decoding="async">
+              </div>
+              <div class="project-info">
+                <h4>Mobile Home</h4>
+                <p>3D floating home with exterior / interior views</p>
+                <span class="project-tags">Three.js · UI/UX</span>
+              </div>
+              <svg class="project-arrow" aria-hidden="true"><use href="#i-arrow-ur" /></svg>
+            </a>
+          </li>
+          <li class="project" data-cat="brand">
+            <a href="https://nghiadang-vizion.github.io/Aura_Jewelry_Store.2025/" target="_blank" rel="noopener">
+              <div class="project-thumb">
+                <img src="./images/work/s1-sm.webp" alt="" width="720" height="378" loading="lazy" decoding="async">
+              </div>
+              <div class="project-info">
+                <h4>Aura Jewelry</h4>
+                <p>Jewelry storefront with 3D product views</p>
+                <span class="project-tags">React · Three.js</span>
+              </div>
+              <svg class="project-arrow" aria-hidden="true"><use href="#i-arrow-ur" /></svg>
+            </a>
+          </li>
+          <li class="project" data-cat="brand">
+            <a href="http://baobitienthanh.com/" target="_blank" rel="noopener">
+              <div class="project-thumb">
+                <img src="./images/work/s10-sm.webp" alt="" width="720" height="357" loading="lazy" decoding="async">
+              </div>
+              <div class="project-info">
+                <h4>Bao Bì Tiến Thành</h4>
+                <p>Catalogue &amp; e-commerce site for a packaging maker</p>
+                <span class="project-tags">Laravel · SQL</span>
+              </div>
+              <svg class="project-arrow" aria-hidden="true"><use href="#i-arrow-ur" /></svg>
+            </a>
+          </li>
+          <li class="project" data-cat="brand">
+            <a href="https://vizion.global/" target="_blank" rel="noopener">
+              <div class="project-thumb">
+                <img src="./images/work/s2-sm.webp" alt="" width="720" height="367" loading="lazy" decoding="async">
+              </div>
+              <div class="project-info">
+                <h4>Vizion Home Page</h4>
+                <p>Animated company landing page</p>
+                <span class="project-tags">Landing · Animation</span>
+              </div>
+              <svg class="project-arrow" aria-hidden="true"><use href="#i-arrow-ur" /></svg>
+            </a>
+          </li>
+          <li class="project" data-cat="brand">
+            <a href="https://fromthestress.vn/" target="_blank" rel="noopener">
+              <div class="project-thumb">
+                <img src="./images/work/s7-sm.webp" alt="" width="720" height="367" loading="lazy" decoding="async">
+              </div>
+              <div class="project-info">
+                <h4>From the Stress</h4>
+                <p>Brand landing page with motion</p>
+                <span class="project-tags">Landing · Animation</span>
+              </div>
+              <svg class="project-arrow" aria-hidden="true"><use href="#i-arrow-ur" /></svg>
+            </a>
+          </li>
+          <li class="project" data-cat="brand">
+            <a href="https://vietrunner.com/" target="_blank" rel="noopener">
+              <div class="project-thumb">
+                <img src="./images/work/s8-sm.webp" alt="" width="720" height="401" loading="lazy" decoding="async">
+              </div>
+              <div class="project-info">
+                <h4>Vietrunner</h4>
+                <p>Brand site for a running community</p>
+                <span class="project-tags">Landing · Animation</span>
+              </div>
+              <svg class="project-arrow" aria-hidden="true"><use href="#i-arrow-ur" /></svg>
+            </a>
+          </li>
+        </ul>
+
+        <aside class="inline-cta reveal" aria-label="Contact">
+          <p><strong>Building something with real-time data or 3D?</strong> I'd love to hear about it.</p>
+          <a href="#contact" class="btn btn-primary">
+            Start a conversation <svg class="btn-icon" aria-hidden="true"><use href="#i-arrow-r" /></svg>
+          </a>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ═════════════ EXPERTISE ═════════════ -->
+    <section class="section section-raised" id="expertise" aria-labelledby="expertiseTitle">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow"><span>02</span> Expertise</p>
+          <h2 class="section-title" id="expertiseTitle">What I bring to a team.</h2>
+        </header>
+
+        <ul class="skills">
+          <li class="skill reveal">
+            <div class="skill-icon"><i class="fas fa-code" aria-hidden="true"></i></div>
+            <h3>Front-end development</h3>
+            <p>Responsive, performant web apps with clean component architecture and maintainable code.</p>
+            <ul class="chips">
+              <li>React</li><li>Next.js</li><li>TypeScript</li><li>SASS</li>
+            </ul>
+          </li>
+          <li class="skill reveal">
+            <div class="skill-icon"><i class="fas fa-tachometer-alt" aria-hidden="true"></i></div>
+            <h3>Data-heavy UI &amp; performance</h3>
+            <p>State management, forms and rendering tuned for large tables, long lists and live operational
+              dashboards.</p>
+            <ul class="chips">
+              <li>State mgmt</li><li>Virtualisation</li><li>Profiling</li>
+            </ul>
+          </li>
+          <li class="skill reveal">
+            <div class="skill-icon"><i class="fas fa-cube" aria-hidden="true"></i></div>
+            <h3>3D, XR &amp; Digital Twin</h3>
+            <p>Production 3D on the web with optimised shaders and asset pipelines — from product viewers to live
+              warehouse twins.</p>
+            <ul class="chips">
+              <li>Three.js</li><li>WebGL</li><li>WebXR</li><li>Model-Viewer</li>
+            </ul>
+          </li>
+          <li class="skill reveal">
+            <div class="skill-icon"><i class="fas fa-plug" aria-hidden="true"></i></div>
+            <h3>Integration &amp; delivery</h3>
+            <p>REST APIs, JWT auth flows and real-time telemetry, shipped in Agile/Scrum teams with AI-assisted
+              workflows.</p>
+            <ul class="chips">
+              <li>REST</li><li>JWT</li><li>Docker</li><li>Nginx</li><li>Git</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ═════════════ EXPERIENCE ═════════════ -->
+    <section class="section" id="experience" aria-labelledby="experienceTitle">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow"><span>03</span> Experience</p>
+          <h2 class="section-title" id="experienceTitle">Where I've been building.</h2>
+        </header>
+
+        <ol class="timeline">
+          <li class="tl-item is-current reveal">
+            <div class="tl-when">
+              <span class="tl-date">2026 — Now</span>
+              <span class="tl-badge">Current</span>
             </div>
+            <div class="tl-body">
+              <h3>Frontend Web Developer <span>@ Vinatech Solution</span></h3>
+              <ul class="tl-points">
+                <li>Building high-fidelity 3D Digital Twins for intelligent Warehouse Management Systems.</li>
+                <li>Low-latency real-time sync between AGV/AMR robots and the 3D web model via telemetry processing.
+                </li>
+                <li>Multi-layer dashboards for monitoring tasks, workflows and system audits.</li>
+              </ul>
+              <ul class="chips">
+                <li>Three.js</li><li>React</li><li>WebGL</li><li>Telemetry</li><li>Digital Twin</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="tl-item reveal">
+            <div class="tl-when">
+              <span class="tl-date">2022 — 2026</span>
+            </div>
+            <div class="tl-body">
+              <h3>Software Engineer, Front-end <span>@ Vizion LLC</span></h3>
+              <ul class="tl-points">
+                <li>Re-architected component structures of enterprise web apps — <strong>30% faster</strong> initial
+                  page load.</li>
+                <li>Integrated REST APIs with response caching and state hydration — <strong>25% faster</strong> API
+                  interactions.</li>
+                <li>Built <strong>10+ production 3D web apps</strong> with Three.js &amp; WebGL.</li>
+              </ul>
+              <ul class="chips">
+                <li>React</li><li>Next.js</li><li>TypeScript</li><li>Three.js</li><li>Agile/Scrum</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="tl-item reveal">
+            <div class="tl-when">
+              <span class="tl-date">2018 — 2022</span>
+            </div>
+            <div class="tl-body">
+              <h3>B.Sc. Software Engineering <span>@ Ton Duc Thang University</span></h3>
+              <ul class="tl-points">
+                <li>Information Technology major, GPA 7.5/10 — foundations in software architecture, data structures
+                  and modern web technologies.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ═════════════ ABOUT ═════════════ -->
+    <section class="section section-raised" id="about" aria-labelledby="aboutTitle">
+      <div class="container about">
+        <div class="about-photo reveal">
+          <img src="./images/work/profile2.webp" alt="Portrait of Nghia Dang" width="600" height="900" loading="lazy"
+            decoding="async">
+        </div>
+
+        <div class="about-copy">
+          <header class="section-head reveal">
+            <p class="eyebrow"><span>04</span> About</p>
+            <h2 class="section-title" id="aboutTitle">Product-minded, detail-obsessed.</h2>
+          </header>
+
+          <div class="about-text reveal">
+            <p>I enjoy the hard middle layer of the frontend: taking messy back-end architectures, telemetry streams and
+              3D simulation output and turning them into interfaces that feel precise and quick.</p>
+            <p>I work best in Agile/Scrum teams where design, product and engineering talk early. I lean on AI tools
+              like Gemini and ChatGPT to move faster — and on profiling and testing to make sure faster doesn't mean
+              sloppier.</p>
+          </div>
+
+          <dl class="facts reveal">
+            <div><dt>Based in</dt><dd>Ho Chi Minh City, Vietnam</dd></div>
+            <div><dt>Experience</dt><dd>4+ years</dd></div>
+            <div><dt>Education</dt><dd>Ton Duc Thang University</dd></div>
+            <div><dt>Languages</dt><dd>Vietnamese, English (TOEIC 600+)</dd></div>
+          </dl>
+
+          <div class="cv-links reveal">
+            <span>Download résumé</span>
+            <a href="./cv/CV_Dang_Hoang_Dai_Nghia_Frontend_Developer_EN.pdf" class="btn btn-ghost btn-sm" download>
+              <i class="fas fa-download" aria-hidden="true"></i> English
+            </a>
+            <a href="./cv/CV_Dang_Hoang_Dai_Nghia_Frontend_Developer_VI.pdf" class="btn btn-ghost btn-sm" download>
+              <i class="fas fa-download" aria-hidden="true"></i> Tiếng Việt
+            </a>
           </div>
         </div>
-        <form class="contact-form-wrap" novalidate>
-          <p>Have a project in mind? Let's build something great together. Drop me a message and I'll get back to you
-            within 24 hours.</p>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="contactName">Name</label>
-              <input type="text" id="contactName" placeholder="Your name" required>
-            </div>
-            <div class="form-group">
-              <label for="contactEmail">Email</label>
-              <input type="email" id="contactEmail" placeholder="your@email.com" required>
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="contactPhone">Phone</label>
-              <input type="tel" id="contactPhone" placeholder="+84 ...">
-            </div>
-            <div class="form-group">
-              <label for="contactSubject">Subject</label>
-              <input type="text" id="contactSubject" placeholder="Project type">
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="contactMessage">Message</label>
-            <textarea id="contactMessage" placeholder="Tell me about your project..." rows="4"></textarea>
-          </div>
-          <button type="submit" class="btn-submit">Send message</button>
-        </form>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
+    <!-- ═════════════ CONTACT ═════════════ -->
+    <section class="contact" id="contact" aria-labelledby="contactTitle">
+      <div class="container">
+        <div class="contact-card reveal">
+          <div class="contact-glow" aria-hidden="true"></div>
+          <p class="eyebrow"><span>05</span> Contact</p>
+          <h2 class="contact-title" id="contactTitle">Let's work together.</h2>
+          <p class="contact-lead">Hiring for a frontend role or have a project in mind? Send a short note — I reply
+            within 24 hours.</p>
+
+          <div class="email-row">
+            <a href="mailto:nghia12a319@gmail.com" class="email-link">nghia12a319@gmail.com</a>
+            <button type="button" class="copy-btn" id="copyEmail" data-email="nghia12a319@gmail.com">
+              <i class="far fa-copy" aria-hidden="true"></i>
+              <span class="copy-label">Copy</span>
+            </button>
+          </div>
+
+          <ul class="contact-links">
+            <li>
+              <a href="mailto:nghia12a319@gmail.com" class="btn btn-primary">
+                Send an email <svg class="btn-icon" aria-hidden="true"><use href="#i-arrow-r" /></svg>
+              </a>
+            </li>
+            <li>
+              <a href="tel:+84853783578" class="btn btn-ghost">
+                <i class="fas fa-phone-alt" aria-hidden="true"></i> +84 85 378 35 78
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/nghiadang-vizion" class="btn btn-ghost" target="_blank" rel="noopener">
+                <i class="fab fa-github" aria-hidden="true"></i> GitHub
+              </a>
+            </li>
+          </ul>
+          <p class="sr-only" id="copyStatus" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═════════════ FOOTER ═════════════ -->
   <footer class="footer">
-    <span>&copy; 2026 Nghia Dang. All rights reserved.</span>
+    <div class="container footer-inner">
+      <p>&copy; 2026 Nghia Dang · Hand-built with HTML, CSS &amp; vanilla JS.</p>
+      <a href="#top" class="footer-top">Back to top <svg aria-hidden="true"><use href="#i-arrow-ur" /></svg></a>
+    </div>
   </footer>
 
-  <!-- Scroll Top -->
-  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
-    <i class="fas fa-chevron-up"></i>
-  </button>
-
-  <script src="./js/app.js"></script>
+  <script src="./js/app.js?v=4"></script>
 </body>
 
 </html>

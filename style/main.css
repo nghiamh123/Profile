@@ -320,7 +320,7 @@
 
 .hero-title {
   font-family: var(--font-display);
-  font-size: clamp(2.6rem, 6.2vw, 4.9rem);
+  font-size: clamp(2.5rem, 5.4vw, 4.25rem);
   font-weight: 600;
   line-height: 1.02;
   letter-spacing: -0.035em;
@@ -1005,3 +1005,111 @@
 
 .footer-top svg { width: 16px; height: 16px; transform: rotate(-45deg); }
 .footer-top:hover { color: var(--accent); }
+
+/* ══════════════════════════════════
+   CONTENT ADDITIONS (case studies, principles)
+   ══════════════════════════════════ */
+.tk-c { color: #6f7385; font-style: italic; }
+
+.feature-points { display: grid; gap: 8px; margin-top: 18px; max-width: 460px; }
+
+.feature-points li,
+.case-points li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 0.95rem;
+  color: var(--text-2);
+}
+
+.feature-points li::before,
+.case-points li::before {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: 0.72em;
+  width: 8px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--accent);
+}
+
+.link-row { display: flex; flex-wrap: wrap; gap: 4px 24px; }
+
+.cases-head {
+  margin: clamp(80px, 10vw, 120px) 0 28px;
+  padding-top: 40px;
+  border-top: 1px solid var(--line);
+}
+
+.cases-head p { margin-top: 6px; color: var(--text-2); }
+
+.cases {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.case {
+  display: flex;
+  flex-direction: column;
+  padding: 28px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  background: var(--bg-card);
+  transition: border-color 0.3s ease;
+}
+
+.case:hover { border-color: var(--line-strong); }
+
+.case-meta {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+  color: var(--text-3);
+}
+
+.case-meta span { display: block; margin-bottom: 4px; color: var(--accent); }
+
+.case h4 {
+  margin: 12px 0 14px;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.case-points { display: grid; gap: 8px; margin-bottom: 22px; }
+.case .chips { margin-top: auto; }
+
+.more-head.after-cases { margin-top: clamp(64px, 8vw, 96px); }
+
+.tl-note { margin: -4px 0 20px; font-size: 0.925rem; color: var(--text-3); }
+.tl-note a { color: var(--accent); font-weight: 500; }
+.tl-note a:hover { text-decoration: underline; }
+
+.principles {
+  display: grid;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.principles li {
+  padding: 16px 18px;
+  border-left: 2px solid var(--accent);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  background: var(--accent-soft);
+}
+
+.principles strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.principles span { display: block; margin-top: 4px; font-size: 0.925rem; color: var(--text-2); }
+
+.skills { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+.case-link { margin-top: 12px; padding-bottom: 0; }

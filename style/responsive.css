@@ -138,3 +138,14 @@
   .feature-media::after { opacity: 1; transform: none; }
   .hero-glow { transition: none; }
 }
+
+/* Content additions */
+@media (max-width: 1024px) {
+  .skills { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cases { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .skills { grid-template-columns: 1fr; }
+  .case { padding: 22px; }
+}

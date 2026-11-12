@@ -14,7 +14,7 @@
     if (themeToggle) {
       themeToggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
     }
-    if (themeMeta) themeMeta.setAttribute('content', theme === 'dark' ? '#0d0d10' : '#f7f6f3');
+    if (themeMeta) themeMeta.setAttribute('content', theme === 'dark' ? '#060a13' : '#f4f7fc');
   }
 
   applyTheme(root.getAttribute('data-theme') || 'dark');

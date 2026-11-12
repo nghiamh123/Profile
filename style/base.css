@@ -4,22 +4,23 @@
 :root {
   color-scheme: dark;
 
-  --accent: #ff6b72;
-  --accent-strong: #ff858b;
-  --accent-ink: #1a0b0c;
-  --accent-soft: rgba(255, 107, 114, 0.12);
-  --accent-glow: rgba(255, 107, 114, 0.28);
+  --accent: #4d94ff;
+  --accent-strong: #5fd0ff;
+  --accent-ink: #04101f;
+  --accent-soft: rgba(77, 148, 255, 0.12);
+  --accent-glow: rgba(77, 148, 255, 0.3);
+  --logo: #9cc2ff;
 
-  --bg: #0d0d10;
-  --bg-raised: #141418;
-  --bg-card: #18181d;
-  --bg-hover: #1f1f25;
-  --line: rgba(255, 255, 255, 0.08);
-  --line-strong: rgba(255, 255, 255, 0.16);
+  --bg: #060a13;
+  --bg-raised: #0b1220;
+  --bg-card: #0e1628;
+  --bg-hover: #142039;
+  --line: rgba(148, 180, 255, 0.09);
+  --line-strong: rgba(148, 180, 255, 0.18);
 
-  --text: #f3f3f5;
-  --text-2: #b4b4bf;
-  --text-3: #85858f;
+  --text: #eaf1ff;
+  --text-2: #a8b6d0;
+  --text-3: #7d8cab;
 
   --success: #4ade80;
 
@@ -38,32 +39,33 @@
   --section-space: clamp(88px, 12vw, 152px);
 
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
-  --shadow-card: 0 1px 0 rgba(255, 255, 255, 0.04) inset, 0 20px 50px -24px rgba(0, 0, 0, 0.6);
+  --shadow-card: 0 1px 0 rgba(148, 180, 255, 0.05) inset, 0 20px 50px -24px rgba(0, 0, 0, 0.7);
 }
 
 :root[data-theme="light"] {
   color-scheme: light;
 
-  --accent: #e2474f;
-  --accent-strong: #c93840;
+  --accent: #1d63e0;
+  --accent-strong: #1f3a5f;
   --accent-ink: #ffffff;
-  --accent-soft: rgba(226, 71, 79, 0.09);
-  --accent-glow: rgba(226, 71, 79, 0.2);
+  --accent-soft: rgba(29, 99, 224, 0.08);
+  --accent-glow: rgba(29, 99, 224, 0.2);
+  --logo: #1f3a5f;
 
-  --bg: #f7f6f3;
+  --bg: #f4f7fc;
   --bg-raised: #ffffff;
   --bg-card: #ffffff;
-  --bg-hover: #f1efeb;
-  --line: rgba(20, 20, 30, 0.09);
-  --line-strong: rgba(20, 20, 30, 0.18);
+  --bg-hover: #eaf0fa;
+  --line: rgba(16, 36, 72, 0.1);
+  --line-strong: rgba(16, 36, 72, 0.2);
 
-  --text: #141418;
-  --text-2: #4a4a55;
-  --text-3: #6c6c78;
+  --text: #0d1b33;
+  --text-2: #3c4a64;
+  --text-3: #5c6a85;
 
   --success: #16a34a;
 
-  --shadow-card: 0 1px 2px rgba(20, 20, 30, 0.04), 0 18px 40px -26px rgba(20, 20, 30, 0.25);
+  --shadow-card: 0 1px 2px rgba(16, 36, 72, 0.05), 0 18px 40px -26px rgba(16, 36, 72, 0.28);
 }
 
 /* ══════════════════════════════════

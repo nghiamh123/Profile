@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Facebook cover — Big Meanz</title>
+<!-- Render: 1640x624. Safe zone for mobile crop = centre ~1110px (x 265–1375).
+     Desktop profile picture overlaps the bottom-left corner, keep it empty. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=block" rel="stylesheet">
+<style>
+  :root {
+    --bg: #060a13;
+    --accent: #4d94ff;
+    --accent-strong: #5fd0ff;
+    --text: #eaf1ff;
+    --text-2: #a8b6d0;
+    --text-3: #7d8cab;
+    --line: rgba(148, 180, 255, 0.08);
+    --line-strong: rgba(148, 180, 255, 0.18);
+    --success: #4ade80;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1640px; height: 624px; overflow: hidden; background: var(--bg); }
+  body {
+    position: relative;
+    font-family: 'Inter', system-ui, sans-serif;
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .grid {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(var(--line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size: 64px 64px;
+    background-position: 20px 24px;
+    -webkit-mask-image: radial-gradient(ellipse 60% 75% at 50% 45%, #000 35%, transparent 85%);
+  }
+  .glow-1 {
+    position: absolute; left: -180px; top: -260px; width: 760px; height: 760px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(77, 148, 255, 0.32) 0%, transparent 62%);
+  }
+  .glow-2 {
+    position: absolute; right: 120px; top: 40px; width: 620px; height: 620px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(95, 208, 255, 0.10) 0%, transparent 65%);
+  }
+
+  .stage {
+    position: absolute; left: 320px; right: 300px; top: 0; bottom: 0;
+    display: grid; grid-template-columns: 1fr 400px; gap: 56px; align-items: center;
+  }
+
+  .pill {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 8px 16px 8px 12px; border-radius: 999px;
+    border: 1px solid var(--line-strong); background: rgba(11, 18, 32, 0.7);
+    font-size: 15px; font-weight: 500; color: var(--text-2);
+  }
+  .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--success); box-shadow: 0 0 0 4px rgba(74, 222, 128, 0.18); }
+
+  .name {
+    margin-top: 26px;
+    display: flex; align-items: center; gap: 12px;
+    font-size: 19px; font-weight: 500; color: var(--text-2);
+  }
+  .name svg { width: 30px; height: 30px; fill: #9cc2ff; flex: none; }
+  .name b { color: var(--text); font-weight: 600; }
+
+  h1 {
+    margin-top: 14px;
+    font-family: 'Outfit', sans-serif; font-weight: 600;
+    font-size: 66px; line-height: 1.02; letter-spacing: -0.035em;
+  }
+  h1 em {
+    font-style: normal;
+    background: linear-gradient(100deg, var(--accent) 10%, var(--accent-strong) 90%);
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+  }
+
+  .stack { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 8px; }
+  .stack span {
+    padding: 6px 13px; border-radius: 999px;
+    border: 1px solid rgba(148, 180, 255, 0.1); background: #0e1628;
+    font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--text-2);
+  }
+
+  .code {
+    border-radius: 16px; border: 1px solid var(--line-strong);
+    background: rgba(10, 18, 34, 0.92);
+    box-shadow: 0 30px 70px -24px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.02) inset;
+    overflow: hidden;
+    transform: rotate(-1.5deg);
+  }
+  .bar { display: flex; align-items: center; gap: 7px; padding: 12px 16px; border-bottom: 1px solid rgba(148, 180, 255, 0.1); }
+  .bar i { width: 10px; height: 10px; border-radius: 50%; display: block; }
+  .bar i:nth-child(1) { background: #ff5f57; } .bar i:nth-child(2) { background: #febc2e; } .bar i:nth-child(3) { background: #28c840; }
+  .bar code { margin-left: 8px; font-family: 'JetBrains Mono', monospace; font-size: 12.5px; color: #8794b0; }
+  pre { padding: 18px 20px 20px; font-family: 'JetBrains Mono', monospace; font-size: 14px; line-height: 1.75; color: #e3ebfa; }
+  .k { color: #c792ea; } .v { color: #82aaff; } .s { color: #c3e88d; } .n { color: #f78c6c; } .c { color: #6f7c99; font-style: italic; }
+  .caret { display: inline-block; width: 8px; height: 16px; vertical-align: -3px; background: var(--accent); margin-left: 2px; }
+
+  .url {
+    margin-top: 22px; text-align: right;
+    font-family: 'JetBrains Mono', monospace; font-size: 15px; color: var(--text-3);
+  }
+  .url b { color: var(--accent); font-weight: 500; }
+</style>
+</head>
+<body>
+  <div class="grid"></div>
+  <div class="glow-1"></div>
+  <div class="glow-2"></div>
+
+  <div class="stage">
+    <div>
+      <span class="pill"><span class="dot"></span>Now building a 3D Digital Twin WMS</span>
+      <p class="name"><svg viewBox="199 199 625 625" aria-hidden="true"><path d="M218 330 L500 478 Q510 483 520 478 L558 457 C588 440 605 413 605 384 L605 345 C605 306 578 277 540 277 L425 277 L425 349 Q424 354 418 351 L362 320 Q355 316 355 308 L355 205 L530 205 C610 207 675 275 675 352 L675 382 C675 440 646 485 604 508 L520 556 Q510 561 500 556 L290 447 L290 690 Q290 693 287 693 L218 693 Z"/><path d="M355 598 L419 633 Q425 637 425 643 L425 749 L520 749 C575 749 609 718 609 676 L609 640 C609 617 601 600 589 588 L636 556 Q642 552 648 558 C664 578 673 603 673 632 L673 690 C673 762 622 818 560 818 L357 818 Z"/><path d="M733 373 Q733 368 738 365 L805 328 L805 693 L736 693 Q733 693 733 690 Z"/></svg><b>Big Meanz</b> · Fullstack Software Engineer</p>
+      <h1>I build <em>fast, clear</em><br>products for web,<br>mobile &amp; desktop.</h1>
+      <div class="stack">
+        <span>TypeScript</span><span>React</span><span>Next.js</span><span>Node.js</span><span>Three.js</span><span>Swift</span>
+      </div>
+    </div>
+
+    <div>
+      <div class="code">
+        <div class="bar"><i></i><i></i><i></i><code>bigmeanz.ts</code></div>
+<pre><span class="k">export const</span> <span class="v">bigMeanz</span> = {
+  role: <span class="s">'Fullstack Engineer'</span>,
+  platforms: [<span class="s">'Web'</span>, <span class="s">'Mobile'</span>,
+              <span class="s">'Desktop'</span>],
+  focus: [<span class="s">'Real-time'</span>, <span class="s">'3D'</span>],
+  shipped3dApps: <span class="n">10</span>, <span class="c">// +</span>
+}<span class="caret"></span></pre>
+      </div>
+      <p class="url"><b>→</b> nghiadang.site</p>
+    </div>
+  </div>
+</body>
+</html>

@@ -179,7 +179,8 @@
   letter-spacing: -0.01em;
 }
 
-.nav-logo img { width: 32px; height: 32px; border-radius: 8px; }
+.nav-logo-mark { width: 32px; height: 32px; flex: none; color: var(--logo); fill: currentColor; transition: color 0.2s ease; }
+.nav-logo:hover .nav-logo-mark { color: var(--accent); }
 
 .nav-menu ul { display: flex; gap: 4px; }
 
@@ -403,7 +404,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(13, 13, 16, 0.55), transparent 45%);
+  background: linear-gradient(to top, rgba(6, 10, 19, 0.55), transparent 45%);
 }
 
 .code-card {
@@ -413,11 +414,11 @@
   width: min(340px, 92%);
   border-radius: var(--radius-md);
   border: 1px solid var(--line-strong);
-  background: color-mix(in srgb, #111115 88%, transparent);
+  background: color-mix(in srgb, #0a1222 88%, transparent);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   box-shadow: 0 24px 60px -20px rgba(0, 0, 0, 0.6);
-  color: #e6e6ea;
+  color: #e3ebfa;
   overflow: hidden;
 }
 
@@ -426,10 +427,10 @@
   align-items: center;
   gap: 6px;
   padding: 10px 14px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(148, 180, 255, 0.1);
 }
 
-.code-card-bar span { width: 9px; height: 9px; border-radius: 50%; background: #3a3a42; }
+.code-card-bar span { width: 9px; height: 9px; border-radius: 50%; background: #2a3550; }
 .code-card-bar span:first-child { background: #ff5f57; }
 .code-card-bar span:nth-child(2) { background: #febc2e; }
 .code-card-bar span:nth-child(3) { background: #28c840; }
@@ -438,7 +439,7 @@
   margin-left: 8px;
   font-family: var(--font-mono);
   font-size: 0.72rem;
-  color: #8f8f9a;
+  color: #8794b0;
 }
 
 .code-card pre {
@@ -1009,7 +1010,7 @@
 /* ══════════════════════════════════
    CONTENT ADDITIONS (case studies, principles)
    ══════════════════════════════════ */
-.tk-c { color: #6f7385; font-style: italic; }
+.tk-c { color: #6f7c99; font-style: italic; }
 
 .feature-points { display: grid; gap: 8px; margin-top: 18px; max-width: 460px; }
 

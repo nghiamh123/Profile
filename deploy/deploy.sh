@@ -25,6 +25,7 @@ cp index.html "$STAGE/"
 cp -R style js cv "$STAGE/"
 mkdir -p "$STAGE/images" "$STAGE/$FA/css"
 cp -R images/work "$STAGE/images/"
+cp images/logo.svg images/favicon.svg images/favicon-48.png images/apple-touch-icon.png "$STAGE/images/"
 cp "$FA/css/all.min.css" "$STAGE/$FA/css/"
 cp -R "$FA/webfonts" "$STAGE/$FA/"
 find "$STAGE" -name '.DS_Store' -delete
